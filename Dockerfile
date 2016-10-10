@@ -1,9 +1,12 @@
 FROM node:6.7.0
 
 ADD package.json /app/package.json
+ADD typings.json /app/typings.json
 WORKDIR /app
 
 RUN npm install
+RUN ./node_modules/.bin/typings install
+
 
 # Install nginx
 ENV NGINX_VERSION 1.11.4-1~jessie
