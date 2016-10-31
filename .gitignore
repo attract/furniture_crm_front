@@ -3,4 +3,5 @@
 # Editors
 # =======
 .idea
+.idea/
 .vscode
