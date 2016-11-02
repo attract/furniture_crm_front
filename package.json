@@ -26,6 +26,7 @@
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.0",
     "jquery": "^2.2.4",
+    "moment": "^2.15.2",
     "ng2-bootstrap": "1.1.0",
     "ng2-popover": "0.0.11",
     "ng2-uploader": "^1.4.0",
