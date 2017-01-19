@@ -4,8 +4,12 @@ ADD package.json /app/package.json
 ADD typings.json /app/typings.json
 WORKDIR /app
 
-RUN npm install
-RUN ./node_modules/.bin/typings install
+# Install yarn package
+RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
+    echo "deb http://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
+    apt-get update && \
+    apt-get install --no-install-recommends yarn -y
+
 
 # Install nginx
 ENV NGINX_VERSION 1.11.5-1~jessie
