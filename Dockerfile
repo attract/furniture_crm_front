@@ -1,7 +1,5 @@
 FROM node:6.7.0
 
-ADD package.json /app/package.json
-ADD typings.json /app/typings.json
 WORKDIR /app
 
 # Install yarn package
